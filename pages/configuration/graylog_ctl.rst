@@ -494,7 +494,7 @@ With ``graylog-ctl backup-etcd`` a backup of the cluster configuration of a mult
 
   $ graylog-ctl stop etcd
   $ rm -r /var/opt/graylog/data/etcd/member/*
-  $ cp /var/opt/graylog/backup/etcd/<timestamp>/member/wal /var/opt/graylog/data/etcd/member/
+  $ cp -R /var/opt/graylog/backup/etcd/<timestamp>/member/wal /var/opt/graylog/data/etcd/member/
   $ chown -R graylog.graylog /var/opt/graylog/data/etcd/member/wal
   $ su -c '/opt/graylog/embedded/sbin/etcd -data-dir=/var/opt/graylog/data/etcd -force-new-cluster' graylog
   <Ctrl-C>
